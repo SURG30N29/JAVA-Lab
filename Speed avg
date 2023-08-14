@@ -1,4 +1,4 @@
-mport java.util.Scanner;
+import java.util.Scanner;
 class Qualify{
     public static void main(String arg[]){
         Scanner sc=new Scanner(System.in);
