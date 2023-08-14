@@ -1,0 +1,23 @@
+import java.util.Scanner;
+class Salary {
+    public static void main(String[] args) {
+        double basic,DA,HRA,CCA=240,PF,PT=100,gs,net;
+        int empno;
+        String empname;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the employee name");
+        empname = sc.next();
+        System.out.println("Enter your employee number");
+        empno = sc.nextInt();
+        System.out.println("Enter basic salary");
+        basic = sc.nextDouble();
+        DA=0.7*basic;
+        HRA=0.3*basic;
+        PF=0.1*basic;
+        gs=basic+HRA+DA+CCA;
+
+        net=gs-PF-PT;
+        System.out.println("The gross Salary is: "+gs);
+        System.out.println("The net Salary is: "+net);
+    }
+}
