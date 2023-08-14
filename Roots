@@ -1,0 +1,24 @@
+import java.util.Scanner;
+class roots{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        double f,det,rtdt,a,b,c,r1,r2;
+        System.out.println("Enter a,b,c");
+        a = sc.nextDouble();
+        b = sc.nextDouble();
+        c = sc.nextDouble();
+        f=Math.pow(b,2);
+        det=f-4*a*c;
+        if (det<0){
+            System.out.println("Roots are not real");
+        }
+        else{
+            rtdt=Math.sqrt(det);
+            r1=(-b+rtdt)/2*a;
+            r2=(-b-rtdt)/2*a;
+            System.out.println("The roots are: "+r1+" and "+r2);
+
+        }
+    }
+
+}
