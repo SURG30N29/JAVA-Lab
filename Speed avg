@@ -1,0 +1,23 @@
+mport java.util.Scanner;
+class Qualify{
+    public static void main(String arg[]){
+        Scanner sc=new Scanner(System.in);
+        int speed[];
+        float sum=0;
+        float avg=0;
+        speed = new int[5];
+        System.out.println("Enter the speed of the 5 cyclists: ");
+        for(int i=0;i<5;i++){
+            speed[i]=sc.nextInt();
+        }
+        for(int i=0;i<5;i++){
+            sum=sum+speed[i];
+        }
+        avg=sum/5;
+        for(int i=0;i<5;i++){
+            if(speed[i]>=avg){
+                System.out.println("\nSpeed of the qualified racer is:" +speed[i]);
+            }
+        }
+    }
+}
