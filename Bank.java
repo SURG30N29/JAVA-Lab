@@ -53,7 +53,7 @@ class bank{
     public static void balance(){
         
     }
-    public static void main(String[] args){
+    public static void Bank(String[] args){
         Scanner sc=new Scanner(System.in);
         int n;
         System.out.println("Enter the condition you want to use:\n1 to Create account\n2 to Deposit\n3 to withdraw\n4 to Compute Interest\n5 to Display balance\n----------------");
