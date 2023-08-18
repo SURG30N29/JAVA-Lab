@@ -1,0 +1,24 @@
+import java.util.Scanner;
+class armstrong{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int num;
+        int d;
+        double sum=0;
+        int n;
+        System.out.println("Enter a 3 digit number: ");
+        num = sc.nextInt();
+        n=num;
+        while(num!=0){
+            d=num%10;
+            sum=sum+Math.pow(d,3);
+            num=num/10;
+        }
+        if(sum==n){
+            System.out.println("The number "+n+" is an armstrong number");
+        }
+        else{
+            System.out.println("The number "+n+" is an not armstrong number");
+        }
+    }
+}
