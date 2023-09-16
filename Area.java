@@ -19,5 +19,6 @@ public class Main{
         b = sc.nextInt();
         a= getDim(l,b);
         getArea(a);
+        ///i added this
     }
 }
