@@ -1,6 +1,6 @@
 class Employee{
     void print(String Name, int Year, String Address){
-        System.out.println(Name+"\t\t\t"+Year+"\t\t\t"+Address);
+        System.out.println(Name+"\t\t\t"+Year+"\t\t\t"+Address) llll
     }
 }
 class Employee_Details{
