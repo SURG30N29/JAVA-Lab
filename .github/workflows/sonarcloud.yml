@@ -1,0 +1,43 @@
+name: SonarCloud Analysis
+
+on:
+  push:
+    branches:
+      - master  # Change this to the branch you want to analyze, like 'main'
+  pull_request:
+
+jobs:
+  sonarcloud:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up JDK 11
+      uses: actions/setup-java@v1
+      with:
+        java-version: '11'
+
+    - name: Cache SonarCloud packages
+      uses: actions/cache@v1
+      with:
+        path: ~/.sonar/cache
+        key: ${{ runner.os }}-sonar
+        restore-keys: ${{ runner.os }}-sonar
+
+    - name: Cache SonarCloud scanner
+      uses: actions/cache@v1
+      with:
+        path: ~/.sonar/scanner
+        key: ${{ runner.os }}-sonar-scanner
+        restore-keys: ${{ runner.os }}-sonar-scanner
+
+    - name: SonarCloud Scan
+      uses: sonarsource/sonarcloud-github-action@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub token, already provided by GitHub Actions
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}    # SonarCloud token you added as a GitHub secret
+
+    - name: Upload Analysis Result
+      run: echo "SonarCloud analysis completed"
