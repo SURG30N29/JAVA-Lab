@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class Main{
     public static int getDim(int l,int b) {
-        return l*b;
+         l*b;
     }
 
     public static int getArea(int a) {
