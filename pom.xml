@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Project coordinates: Group ID, Artifact ID, and Version -->
+    <groupId>com.example</groupId>
+    <artifactId>java-lab</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>Java Lab Project</name>
+
+    <!-- Properties for Maven and SonarCloud -->
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source> <!-- Update to your required JDK version -->
+        <maven.compiler.target>17</maven.compiler.target> <!-- Update to your required JDK version -->
+        <sonar.organization>surg30n29</sonar.organization> <!-- Replace with your SonarCloud organization -->
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+    </properties>
+
+    <!-- Build configuration -->
+    <build>
+        <plugins>
+            <!-- Compiler plugin to define Java version -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
+            </plugin>
+
+            <!-- SonarCloud Maven Plugin -->
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.9.1.2184</version> <!-- Latest version of Sonar Scanner for Maven -->
+            </plugin>
+        </plugins>
+    </build>
+
+    <!-- Dependencies -->
+    <dependencies>
+        <!-- JUnit for unit testing -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Add other dependencies as needed -->
+    </dependencies>
+
+</project>
